@@ -14,6 +14,7 @@ import 'iron_fit_behavior.dart';
 import 'iron_resizable_behavior.dart';
 import 'neon_animation_runner_behavior.dart';
 import 'neon_animatable_behavior.dart';
+import 'paper_dialog_styles.dart';
 import 'paper_styles.dart';
 
 /// `<paper-dialog>` is a dialog with Material Design styling and optional animations when it is
