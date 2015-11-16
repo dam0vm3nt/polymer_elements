@@ -16,9 +16,11 @@ main() async {
 
   group('multi', () {
     IronSelector s;
+    TemplateElement t;
 
     setUp(() {
       s = fixture('test');
+      t = Polymer.dom(s).querySelector('[is="dom-repeat"]');
     });
 
     test('honors the multi attribute', () {
@@ -82,7 +84,7 @@ main() async {
       expect(selectEventCounter, 1);
       expect(deselectEventCounter, 1);
     });
-    
+
     test('fires selected-values-changed when selection changes', () {
       var selectedValuesChangedEventCounter = 0;
 
@@ -114,6 +116,26 @@ main() async {
       expect(s.selectedItems[0].text, 'foo');
     });
 
+    test('updates selection when dom changes', () async {
+      var selectEventCounter = 0;
+
+      s = fixture('test');
+
+      await wait(1);
+      var firstChild = Polymer.dom(s).querySelector(':first-child');
+      var lastChild = Polymer.dom(s).querySelector(':last-child');
+
+      tap(firstChild);
+      tap(lastChild);
+
+      expect(s.selectedItems.length, 2);
+
+      Polymer.dom(s).removeChild(lastChild);
+
+      await wait(1);
+      expect(s.selectedItems.length, 1);
+    });
+
     /* test('toggle multi from true to false', () {
       // set selected
       s.selected = [0, 2];
@@ -125,6 +147,5 @@ main() async {
       // selected should be the first value from the old array
       expect(s.selected, first);
     }); */
-
   });
 }

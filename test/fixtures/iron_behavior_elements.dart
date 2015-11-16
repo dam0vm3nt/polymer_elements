@@ -30,3 +30,9 @@ class TestButton extends PolymerElement
 class NestedFocusable extends PolymerElement with IronControlState {
   NestedFocusable.created() : super.created();
 }
+
+@PolymerRegister('test-light-dom')
+abstract class LightDom extends PolymerElement
+    with IronControlState, IronButtonState {
+  LightDom.created() : super.created();
+}

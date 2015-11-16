@@ -15,30 +15,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <title>paper dropdown menu test</title>
 
     <script src="packages/web_components/webcomponents-lite.js"></script>
-    <link rel="x-dart-test" href="paper_dropdown_menu_test.dart">
-    <!--<script type="application/dart" src="paper_dropdown_menu_test.dart"></script>-->
+    <link rel="x-dart-test" href="paper_listbox_test.dart">
+
     <script src="packages/test/dart.js"></script>
 </head>
-
 <body>
 
-<template id="TrivialDropdownMenu">
-    <paper-dropdown-menu no-animations>
-        <paper-listbox class="dropdown-content">
-            <paper-item>Foo</paper-item>
-            <paper-item>Bar</paper-item>
+    <template id="basic">
+        <paper-listbox selected="0">
+            <div>item 1</div>
+            <div>item 2</div>
+            <div>item 3</div>
         </paper-listbox>
-    </paper-dropdown-menu>
-</template>
-
-<template id="PreselectedDropdownMenu">
-    <paper-dropdown-menu no-animations>
-        <paper-listbox class="dropdown-content" selected="1">
-            <paper-item>Foo</paper-item>
-            <paper-item>Bar</paper-item>
-        </paper-listbox>
-    </paper-dropdown-menu>
-</template>
+    </template>
 
 </body>
 </html>
