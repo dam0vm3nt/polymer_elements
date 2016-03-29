@@ -57,12 +57,10 @@ import 'shadow.dart';
 ///
 /// If `modal` is set, the element will set `aria-modal` and prevent the focus from exiting the element.
 /// It will also ensure that focus remains in the dialog.
-///
-/// The `aria-labelledby` attribute will be set to the header element, if one exists.
 @BehaviorProxy(const ['Polymer', 'PaperDialogBehavior'])
 abstract class PaperDialogBehavior implements CustomElementProxyMixin, IronOverlayBehavior {
 
-  /// If `modal` is true, this implies `no-cancel-on-outside-click` and `with-backdrop`.
+  /// If `modal` is true, this implies `no-cancel-on-outside-click`, `no-cancel-on-esc-key` and `with-backdrop`.
   bool get modal => jsElement[r'modal'];
   set modal(bool value) { jsElement[r'modal'] = value; }
 }

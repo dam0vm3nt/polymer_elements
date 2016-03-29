@@ -92,6 +92,8 @@ files_to_generate:
   - gold-zip-input/zip-validator.html
 
   # Iron Elements https://elements.polymer-project.org/browse?package=iron-elements
+  - iron-swipeable-container/iron-swipeable-container.html
+  - iron-scroll-target-behavior/iron-scroll-target-behavior.html
   - iron-a11y-announcer/iron-a11y-announcer.html:
       name_substitutions:
           created: create
@@ -290,6 +292,7 @@ files_to_generate:
   - paper-scroll-header-panel/paper-scroll-header-panel.html
   - paper-slider/paper-slider.html
   - paper-spinner/paper-spinner.html
+  - paper-spinner/paper-spinner-lite.html
   - paper-spinner/paper-spinner-behavior.html
   - paper-spinner/paper-spinner-styles.html
   - paper-styles/color.html
@@ -304,11 +307,12 @@ files_to_generate:
   - paper-styles/classes/shadow-layout.html
   - paper-styles/classes/typography.html
   - paper-tabs/paper-tab.html
-  - paper-tabs/paper-tabs.html:
-      type_overrides:
-        PaperTabs:
-          selected:
-            type: any
+  - paper-tabs/paper-tabs.html
+#  - paper-tabs/paper-tabs.html:
+#      type_overrides:
+#        PaperTabs:
+#          selected:
+#            type: any
   - paper-tabs/paper-tabs-icons.html
   - paper-toast/paper-toast.html
   - paper-toggle-button/paper-toggle-button.html
